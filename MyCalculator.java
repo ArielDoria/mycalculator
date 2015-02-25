@@ -38,9 +38,11 @@ public class MyCalculator {
 	
 	// n! of an integer
 	public int nfactorial(int n){
+		if(n<0)return -1;		//catch if the input is negative number it is null represented by -1
+		
 		int factorial = 1;
 		
-		for(int i=1;i<n;i++)
+		for(int i=1;i<=n;i++)	//changes the condition statement to make the answer as correct as possible
 			factorial *= i;
 		
 		return factorial;
@@ -59,7 +61,7 @@ public class MyCalculator {
 			else return middle;
 		}
 		
-		return 1;
+		return -1; //Negative should be the return statement since 1 ca be an index
 	}
 	
 }
